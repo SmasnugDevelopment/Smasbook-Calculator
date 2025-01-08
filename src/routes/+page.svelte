@@ -6,6 +6,13 @@
 
   let formFactor = $state("");
   let ram = $state(0);
+  let windows = $state(false);
+  let linux = $state(false);
+  let chromeos = $state(false);
+  let other = $state(false);
+  let oscount = $derived(
+    [windows, linux, chromeos, other].filter((os) => os).length
+  );
 </script>
 
 <div class="w-screen h-screen flex flex-col justify-center items-center">
@@ -21,23 +28,19 @@
     <Input placeholder="GB of RAM" type="number" bind:value={ram} />
     <h2 class="text-xl">Operating Systems</h2>
     <div class="flex items-center space-x-2">
-      <Checkbox id="windows" />
+      <Checkbox id="windows" bind:checked={windows} />
       <Label for="windows">Windows</Label>
     </div>
     <div class="flex items-center space-x-2">
-      <Checkbox id="linux" />
+      <Checkbox id="linux" bind:checked={linux} />
       <Label for="linux">Linux</Label>
     </div>
     <div class="flex items-center space-x-2">
-      <Checkbox id="chromeos" />
+      <Checkbox id="chromeos" bind:checked={chromeos} />
       <Label for="chromeos">ChromeOS</Label>
     </div>
     <div class="flex items-center space-x-2">
-      <Checkbox id="bsd" />
-      <Label for="bsd">BSD</Label>
-    </div>
-    <div class="flex items-center space-x-2">
-      <Checkbox id="other" />
+      <Checkbox id="other" bind:checked={other} />
       <Label for="other">Other</Label>
     </div>
   </div>
