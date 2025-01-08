@@ -23,7 +23,7 @@
   <title>Smasbook Calculator</title>
 </sveltekit:head>
 
-<div class="w-screen h-screen flex flex-col justify-center items-center">
+<div class="w-screen h-screen flex flex-col justify-center items-center p-3">
   <div class="w-96 max-w-full flex gap-3 flex-col">
     <h1 class="text-3xl">Smasbook Calculator</h1>
     <Select.Root bind:value={formfactor} type="single">
