@@ -6,6 +6,7 @@
 
   let formFactor = $state("");
   let ram = $state();
+  let screensize = $state();
   let windows = $state(false);
   let linux = $state(false);
   let chromeos = $state(false);
@@ -26,6 +27,11 @@
       </Select.Content>
     </Select.Root>
     <Input placeholder="GB of RAM" type="number" bind:value={ram} />
+    <Input
+      placeholder="Screen size in inches"
+      type="number"
+      bind:value={screensize}
+    />
     <h2 class="text-xl">Operating Systems</h2>
     <div class="flex items-center space-x-2">
       <Checkbox id="windows" bind:checked={windows} />
