@@ -81,3 +81,7 @@
     {/if}
   </div>
 </div>
+
+<div class="fixed bottom-2 left-2">
+  This website is not affiliated with Smasung Electronics
+</div>
