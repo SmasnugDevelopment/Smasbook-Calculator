@@ -28,7 +28,7 @@
         <Select.Item value="PC">PC</Select.Item>
       </Select.Content>
     </Select.Root>
-    <Label for="ram">RAM</Label>
+    <Label for="ram">RAM in GB</Label>
     <Input placeholder="GB of RAM" type="number" id="ram" bind:value={ram} />
     {#if formFactor === "Laptop"}
       <Label for="screensize">Screen size in inches</Label>
