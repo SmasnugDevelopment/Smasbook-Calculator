@@ -30,7 +30,7 @@
     </Select.Root>
     <Label for="ram">RAM in GB</Label>
     <Input placeholder="GB of RAM" type="number" id="ram" bind:value={ram} />
-    {#if formfactor === "Laptop"}
+    {#if formfactor == "Laptop"}
       <Label for="screensize">Screen size in inches</Label>
 
       <Input
@@ -66,7 +66,7 @@
     {#if formfactor}
       <h2 class="text-xl">You have a:</h2>
       <span class="text-4xl">
-        {#if formfactor === "Laptop"}Smasbook{:else}Smasbox{/if}
+        {#if formfactor == "Laptop"}Smasbook{:else}Smasbox{/if}
         {#if linux == true}Pro{/if}
         {#if oscount > 1}Plus{/if}
         {#if (screensize >= 14 && formfactor == "Laptop") || formfactor == "PC"}Max{/if}
