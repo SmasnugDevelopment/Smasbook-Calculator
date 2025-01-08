@@ -54,15 +54,17 @@
       <Checkbox id="other" bind:checked={other} />
       <Label for="other">Other</Label>
     </div>
-    <h2 class="text-xl">You have a:</h2>
-    <span class="text-4xl">
-      {#if formFactor === "PC"}Smasbox{:else}Smasbook{/if}
-      {#if linux == true}Pro{/if}
-      {#if oscount > 1}Plus{/if}
-      {#if screensize >= 14}Max{/if}
-      {#if ram >= 16}Ultra{/if}
-      {#if oscount == 1 && chromeos}Lite{/if}
-      {#if touchscreen}Touch{/if}
-    </span>
+    {#if formFactor}
+      <h2 class="text-xl">You have a:</h2>
+      <span class="text-4xl">
+        {#if formFactor === "PC"}Smasbox{:else}Smasbook{/if}
+        {#if linux == true}Pro{/if}
+        {#if oscount > 1}Plus{/if}
+        {#if screensize >= 14}Max{/if}
+        {#if ram >= 16}Ultra{/if}
+        {#if oscount == 1 && chromeos}Lite{/if}
+        {#if touchscreen}Touch{/if}
+      </span>
+    {/if}
   </div>
 </div>
