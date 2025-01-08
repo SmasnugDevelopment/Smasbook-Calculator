@@ -3,6 +3,7 @@
   import * as Select from "$lib/components/ui/select/index.js";
 
   let formFactor = $state("");
+  let ram = $state(0);
 </script>
 
 <div class="w-screen h-screen flex flex-col justify-center items-center">
@@ -15,6 +16,6 @@
         <Select.Item value="PC">PC</Select.Item>
       </Select.Content>
     </Select.Root>
-    <Input placeholder="GB of RAM" type="number" />
+    <Input placeholder="GB of RAM" type="number" bind:value={ram} />
   </div>
 </div>
