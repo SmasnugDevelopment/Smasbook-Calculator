@@ -7,6 +7,7 @@
   let formFactor = $state("");
   let ram = $state();
   let screensize = $state();
+  let touchscreen = $state(false);
   let windows = $state(false);
   let linux = $state(false);
   let chromeos = $state(false);
@@ -32,6 +33,10 @@
       type="number"
       bind:value={screensize}
     />
+    <div class="flex items-center space-x-2">
+      <Checkbox id="touchscreen" bind:checked={touchscreen} />
+      <Label for="touchscreen">Touchscreen</Label>
+    </div>
     <h2 class="text-xl">Operating Systems</h2>
     <div class="flex items-center space-x-2">
       <Checkbox id="windows" bind:checked={windows} />
