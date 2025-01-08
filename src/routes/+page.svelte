@@ -4,7 +4,7 @@
   import { Checkbox } from "$lib/components/ui/checkbox/index.js";
   import { Label } from "$lib/components/ui/label/index.js";
 
-  let formFactor = $state("");
+  let formfactor = $state("");
   let ram = $state(0);
   let screensize = $state(0);
   let touchscreen = $state(false);
@@ -20,8 +20,8 @@
 <div class="w-screen h-screen flex flex-col justify-center items-center">
   <div class="w-96 max-w-full flex gap-3 flex-col">
     <h1 class="text-3xl">Smasbook Calculator</h1>
-    <Select.Root bind:value={formFactor} type="single">
-      <Select.Trigger>{formFactor || "Form factor"}</Select.Trigger>
+    <Select.Root bind:value={formfactor} type="single">
+      <Select.Trigger>{formfactor || "Form factor"}</Select.Trigger>
       <Select.Content>
         <Select.Item value="Laptop">Laptop</Select.Item>
         <Select.Item value="Mini PC">Mini PC</Select.Item>
@@ -30,7 +30,7 @@
     </Select.Root>
     <Label for="ram">RAM in GB</Label>
     <Input placeholder="GB of RAM" type="number" id="ram" bind:value={ram} />
-    {#if formFactor === "Laptop"}
+    {#if formfactor === "Laptop"}
       <Label for="screensize">Screen size in inches</Label>
 
       <Input
@@ -63,16 +63,16 @@
       <Checkbox id="other" bind:checked={other} />
       <Label for="other">Other</Label>
     </div>
-    {#if formFactor}
+    {#if formfactor}
       <h2 class="text-xl">You have a:</h2>
       <span class="text-4xl">
-        {#if formFactor === "Laptop"}Smasbook{:else}Smasbox{/if}
+        {#if formfactor === "Laptop"}Smasbook{:else}Smasbox{/if}
         {#if linux == true}Pro{/if}
         {#if oscount > 1}Plus{/if}
-        {#if (screensize >= 14 && formFactor == "Laptop") || formFactor == "PC"}Max{/if}
+        {#if (screensize >= 14 && formfactor == "Laptop") || formfactor == "PC"}Max{/if}
         {#if ram >= 16}Ultra{/if}
         {#if oscount == 1 && chromeos}Lite{/if}
-        {#if touchscreen && formFactor == "Laptop"}Touch{/if}
+        {#if touchscreen && formfactor == "Laptop"}Touch{/if}
       </span>
     {/if}
   </div>
