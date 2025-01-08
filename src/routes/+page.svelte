@@ -5,7 +5,7 @@
   import { Label } from "$lib/components/ui/label/index.js";
 
   let formFactor = $state("");
-  let ram = $state(0);
+  let ram = $state();
   let windows = $state(false);
   let linux = $state(false);
   let chromeos = $state(false);
