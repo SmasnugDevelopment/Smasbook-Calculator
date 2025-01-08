@@ -76,6 +76,7 @@
         {#if linux == true}Pro{/if}
         {#if oscount > 1}Plus{/if}
         {#if (screensize >= 14 && formfactor == "Laptop") || formfactor == "PC"}Max{/if}
+        {#if formfactor == "Mini PC"}Mini{/if}
         {#if ram >= 16}Ultra{/if}
         {#if oscount == 1 && chromeos}Lite{/if}
         {#if touchscreen && formfactor == "Laptop"}Touch{/if}
