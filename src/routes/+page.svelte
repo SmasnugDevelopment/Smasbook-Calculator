@@ -3,6 +3,8 @@
   import * as Select from "$lib/components/ui/select/index.js";
   import { Checkbox } from "$lib/components/ui/checkbox/index.js";
   import { Label } from "$lib/components/ui/label/index.js";
+  import { Button } from "$lib/components/ui/button/index.js";
+  import Code from "lucide-svelte/icons/code";
 
   let formfactor = $state("");
   let ram = $state(0);
@@ -85,3 +87,12 @@
 <div class="fixed bottom-2 left-2">
   This website is not affiliated with Smasung Electronics
 </div>
+
+<Button
+  class="fixed bottom-2 right-2"
+  href="https://github.com/SmasnugDevelopment/Smasbook-Calculator"
+  target="_blank"
+>
+  <Code class="mr-2 size-4" />
+  Source
+</Button>
