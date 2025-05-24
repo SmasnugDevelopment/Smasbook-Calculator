@@ -86,7 +86,7 @@
 </div>
 
 <div class="fixed bottom-0 left-0 p-3 w-screen flex flex-row items-end">
-  <span>This website is not affiliated with Smasung Electronics</span>
+  <span>A <a href="https://smasnug.dev">Smasnug Development</a> project</span>
   <div class="flex-grow"></div>
   <Button
     href="https://github.com/SmasnugDevelopment/Smasbook-Calculator"
